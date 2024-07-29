@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "bg-dark": "#121212",
+        "text-primary": "#E0E0E0",
+        "text-secondary": "#A0A0A0",
+        "accent-1": "#5c6bc0",
+        "accent-2": "#03DAC6",
+        "accent-3": "#CF6679",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
 export default config;
